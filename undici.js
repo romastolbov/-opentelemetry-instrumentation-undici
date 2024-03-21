@@ -322,7 +322,7 @@ class UndiciInstrumentation extends instrumentation_1.InstrumentationBase {
         });
         // Take the duration and record it
         const durationSeconds = (0, core_1.hrTimeToMilliseconds)((0, core_1.hrTimeDuration)(startTime, (0, core_1.hrTime)())) / 1000;
-        this._httpClientDurationHistogram.record(durationSeconds, metricsAttributes);
+        this._httpClientDurationHistogram?.record(durationSeconds, metricsAttributes);
     }
     getRequestMethod(original) {
         const knownMethods = {
